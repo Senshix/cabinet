@@ -1,38 +1,174 @@
+
 .App {
   text-align: center;
+  background: linear-gradient(180deg, #8E7BCB 0%, #FFFFFF 39.58%, #8E7BCB 86.46%);
+  min-height: 275vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 40px;
+
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'Montagu Slab';
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-link {
+  text-decoration: none;
+  gap: 10px;
+  margin-left: 20px;
+  color : white;
+  font-family: 'Montagu Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26.9115px;
+  line-height: 35px;
+}
+.Home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 40px;
+}
+.Text_Home{
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55.6916px;
+  line-height: 70px;
+  text-align: center;
+  color: #595959;
+  max-width: 593.46px  ;
+}
+.Text_Home span {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Button{
+  background: #C6BFDE;
+  box-shadow: 0px 5.22851px 13.9427px rgba(136, 144, 194, 0.25), 0px 12.1999px 36.5996px rgba(37, 44, 97, 0.2);
+  border-radius: 6.97135px;
+  width: 370px;
+  height: 79px;
+}
+.Button span  {
+  font-size: 25px;
+  color: white;
+  
+}
+.About{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+  padding-left: 140px ;
+  padding-right: 140px ;
+}
+.Desc1 p, .Desc2 p, .Pic1 img , .Pic2  img {
+  height: 436px;
+  font-size: xx-large;
+}
+.About_1 , .About_2{
+  display: flex;
+  justify-content: center;
+  flex-direction:column ;
+  text-align: center;
+}
+.Desc1 p , .Desc2 p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.form {
+  border-radius: 25px;
+  width: fit-content;
+  min-width: 30%;
+  margin: auto ;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 50px 10px 50px;
+}
+.form h1 {
+  text-align: center;
+}
+Form {
+  text-align: left;
+}
+Form .form-label {
+  display: block;
+  margin-left: 10px;
+
+}
+
+.inp {
+  width: 45%;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.btn{
+  background-color: #8E7BCB;
+  font-size: larger;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+}
+.footter {
+  height: 300px;
+  padding-left: 140px ;
+  padding-right: 140px ;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #595959;
+}
+.map{
+  width: 30%;
+  height: 30%;
+  border-radius: 10px;
+}
+.map-container  {
+  height: 200px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 700px) {
+  .inp {
+      width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+      margin-bottom: 50px;
   }
 }
+
+
