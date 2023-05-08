@@ -98,6 +98,7 @@ function App() {
               <MarkerF position={center}/>
           </GoogleMap> 
           </div>
+          
         </div>
     </div>
   );
