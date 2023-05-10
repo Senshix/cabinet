@@ -10,6 +10,11 @@ import 'primeicons/primeicons.css'
 import { Calendar } from 'primereact/calendar';
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import { useMemo } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot , faHeartPulse , faCircleInfo,faEnvelope,faPhone,faHashtag} from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 
 function App() {
@@ -21,13 +26,13 @@ function App() {
       {/* navBar */}
       <nav className="navbar">
         <div className="navbar-left">
-          <a href="#" className="navbar-logo">Nissrine Zidane</a>
+          <a href="/" className="navbar-logo" id='Home'>Nissrine Zidane</a>
         </div>
         <div className="navbar-right">
-          <a href="#" className="navbar-link">Accueil</a>
-          <a href="#" className="navbar-link">A propos</a>
-          <a href="#" className="navbar-link">Reservation</a>
-          <a href="#" className="navbar-link">Contact</a>
+          <a href="#Home" className="navbar-link">Accueil</a>
+          <a href="#About" className="navbar-link">A propos</a>
+          <a href="#Reser" className="navbar-link">Reservation</a>
+          <a href="#Footer" className="navbar-link">Contact</a>
         </div>
       </nav>
 
@@ -43,13 +48,13 @@ function App() {
         {/* Button Home */}
       </div>
       <div className='Button_Help'>
-        <button type="button" className="Button"><span>Comment Sa marche ?</span></button>
+        <button type="button" className="Button" id='help' onClick={() => alert('Remplir la formulaire avec votre Coordonnees est votre reservation va se prendre')}><a href="#Reser">Comment Sa marche ?</a></button>
       </div>
 
       {/* About Us */}
       <div className="About">
         <div className="About_1">
-          <div className="Pic1"> <img src={Doctor_2} alt="Doctor in Desk" /></div>
+          <div className="Pic1" id='About'> <img src={Doctor_2} alt="Doctor in Desk" /></div>
             <div className="Desc1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
         </div>
         <div className="About_2">
@@ -60,7 +65,7 @@ function App() {
         </div>
       </div>
       {/* Form */}
-      <div className='form'>
+      <div className='form' id='Reser'>
             <h1>Reservation</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -84,21 +89,44 @@ function App() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Date</Form.Label>
-                    <Calendar dateFormat="dd/mm/yy" className='inp' />
+                    <Calendar dateFormat="dd/mm/yy" className='inp' showTime hourFormat="24" />
                 </Form.Group>
-                <Button variant="primary" className='btn'>
-                    Envoyer vos informations
-                </Button>
+                <input variant="primary" className='btn' type='submit' value="Envoyer vos informations  "/>
+                    
+                
             </Form>
         </div>
         {/* Footer */}
-        <div className="footter">
-          <div className='map'>
-          <GoogleMap zoom={16} center={center} mapContainerClassName="map-container">
-              <MarkerF position={center}/>
-          </GoogleMap> 
+        <div className="footter" id='Footer'>
+          <div className="Container1">
+            <div className='map'>
+            <GoogleMap zoom={16} center={center} mapContainerClassName="map-container">
+                <MarkerF position={center}/>
+            </GoogleMap> 
+            </div>
+            <div className="CordName">
+            <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFFFFF",}} /> Bd de la Résistance, Mohammédia
+            </div>
+            <div className="Name">
+            <FontAwesomeIcon icon={faHeartPulse} style={{color: "#FFFFFF",}} /> Nissrine Zaidane
+            </div>
           </div>
-          
+          <div className="info">
+            <div className="TitleFooter">
+            <FontAwesomeIcon icon={faCircleInfo} style={{color: "#FFFFFF",}} />
+            &nbsp; Information</div>
+            <div><a href='#Reser'>Reservation</a></div>
+            <div><a href='#help'>Comment sa Marche ?</a></div>
+            <div><a href='#About'>Cabinet Information</a></div>
+            <div><a href=''>Contact</a></div>
+          </div>
+          <div className="Contact">
+            <button type="button" className="ButtonContac" id='Contact'><a href = "mailto: Nissrine.zaidane@gmail.com"><FontAwesomeIcon icon={faEnvelope} style={{color: "#000000",}} id='MailIcon' /> Contacter Nous </a></button>
+          </div>
+          <div className="resSoc">
+            <a href="tel:0603907898"target="_blank"><FontAwesomeIcon icon={faPhone}  style={{color: "#FFFFFF",}} size="2xl" /></a>
+            <a href="http://linktr.ee/nissrinezaidane"target="_blank"><FontAwesomeIcon icon={faHashtag} style={{color: "#FFFFFF",}} size="2xl"/></a>
+          </div>
         </div>
     </div>
   );
