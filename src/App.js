@@ -124,7 +124,7 @@ function App() {
             <button type="button" className="ButtonContac" id='Contact'><a href = "mailto: Nissrine.zaidane@gmail.com"><FontAwesomeIcon icon={faEnvelope} style={{color: "#000000",}} id='MailIcon' /> Contacter Nous </a></button>
           </div>
           <div className="resSoc">
-            <a href="tel:0603907898"target="_blank"><FontAwesomeIcon icon={faPhone}  style={{color: "#FFFFFF",}} size="2xl" /></a>
+            <a href="tel:+212603907898"target="_blank"><FontAwesomeIcon icon={faPhone}  style={{color: "#FFFFFF",}} size="2xl" /></a>
             <a href="http://linktr.ee/nissrinezaidane"target="_blank"><FontAwesomeIcon icon={faHashtag} style={{color: "#FFFFFF",}} size="2xl"/></a>
           </div>
         </div>
